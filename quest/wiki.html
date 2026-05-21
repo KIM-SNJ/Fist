@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain World Wiki (Balanced Scale)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        }
+
+        body {
+            background-color: #050508;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('imgs/back.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        .wiki-outer-container {
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            background-color: rgba(0, 0, 0, 0.45);
+            width: 100%;
+            max-width: 1480px;
+            padding: 55px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.75);
+        }
+
+
+        .main-title {
+            font-size: 4.2rem;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: #ffffff;
+            text-shadow: 
+                -1.5px -1.5px 0 #ff0055,  
+                 1.5px -1.5px 0 #ff0055,
+                -1.5px  1.5px 0 #ff0055,
+                 1.5px  1.5px 0 #ff0055,
+                 0 0 15px #aa00ff,
+                 0 0 30px #ff0055;
+            letter-spacing: 1.5px;
+        }
+
+
+        .content-wrapper {
+            display: flex;
+            gap: 55px;
+        }
+
+
+        .sidebar {
+            width: 35%;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            padding: 22px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 22px;
+        }
+
+        .info-text {
+            font-size: 1.35rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 22px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+            margin: 22px 0;
+        }
+
+        .spec-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 22px;
+            color: #ffffff;
+        }
+
+        .spec-details {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+
+        .spec-item {
+            margin-bottom: 6px;
+        }
+
+        /* 우측 메인 콘텐츠 */
+        .main-content {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: normal;
+            margin-bottom: 22px;
+            color: #ffffff;
+        }
+
+        .description {
+            font-size: 1.35rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            text-align: justify;
+            word-break: keep-all;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: auto; 
+            padding-top: 30px;
+        }
+
+        .menu-item {
+            text-align: center;
+        }
+
+        .menu-label {
+            display: block;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .menu-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+
+        .menu-img:hover {
+            border-color: #ff0055;
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 1150px) {
+            .content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+            }
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wiki-outer-container">
+        <h1 class="main-title" >Rain World Wiki</h1>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <img src="imgs/header.jpg" alt="Rain World" class="sidebar-img">
+                
+                <div class="info-text">
+                    <p>개발자 - Videocult</p>
+                    <p>배급사 - Akupara Games</p>
+                    <p>장르 - 메트로베니아, 고난이도, 생존</p>
+                </div>
+
+                <hr class="divider">
+
+                <h3 class="spec-title">권장 사양</h3>
+                <div class="spec-details">
+                    <div class="spec-item">운영 체제: Windows 10 64-bit</div>
+                    <div class="spec-item">프로세서: 6th Gen i5 / 2nd Gen Ryzen</div>
+                    <div class="spec-item" style="padding-left: 74px; margin-top: -2px;">(or better)</div>
+                    <div class="spec-item">메모리: 8 GB RAM</div>
+                    <div class="spec-item">그래픽: GeForce 7 Series / Radeon</div>
+                    <div class="spec-item" style="padding-left: 68px; margin-top: -2px;">RX400 Series (or better)</div>
+                    <div class="spec-item">저장 공간: 4 GB 사용 가능 공간</div>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div>
+                    <h2 class="section-title">1. 개요</h2>
+                    <p class="description">
+                        레인월드는 플레이어블 캐릭터인 슬러그캣 외에도 매우 다양한 생물들이 생태계 속에서 각자의 위치를 지키며 복잡한 관계를 맺는 것이 특징인 게임이다. 슬러그캣에게 우호적인 생물들이 있는가 하면, 공격만 하지 않으면 중립적인 관계를 유지할 수 있거나, 서로를 무시하거나, 슬러그캣을 먹으려고 달려드는 생물들도 있다. 또한 포식자들이 슬러그캣 외의 다른 생물들을 사냥하거나, 포식자가 또 다른 포식자에게 사냥당하는 등 유기적인 생태계를 구현해 놓았다.
+                    </p>
+                    <p class="description">
+                        때문에 레인월드를 시작했다면 생태계의 일원인 슬러그캣으로서, 다른 다양한 생물들의 생태와 특징을 파악하고, 그들과 싸우거나, 사냥하거나, 함께 살아가는 방법을 배워 갈 필요가 있다.
+                    </p>
+                </div>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <a href="wiki2.html" class="menu-label">생명체</a>
+                        <img src="imgs/Creatures_gallery_icon.png" alt="생명체" class="menu-img">
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-label">아이템</span>
+                        <img src="imgs/Objects_gallery_icon.png" alt="아이템" class="menu-img">
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-label">음식</span>
+                        <img src="imgs/Food_gallery_icon.png" alt="음식" class="menu-img">
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-label">업적</span>
+                        <img src="imgs/Achievements_gallery_icon.png" alt="업적" class="menu-img">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
